@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+    div{color:red;font-size: 50px;font-style:Arial;}
+</style>
+</head>
+<body>
+<div>
+    Html Css JavaScript 教程
+</div>
+    <script type="text/JavaScript">
+        let div = document.querySelector('div');
+        let timer = null;
+        let flag = true;
+        div.onmouseover = function(){
+            timer = setInterval(()=>{
+                if(flag){
+                    div.style.color="blue";
+                    flag=false
+                }else{
+                    div.style.color="red";
+                    flag=true
+                }
+            },500)
+        }
+    </script>
+</body>
+</html>
