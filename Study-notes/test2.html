@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<body>
+    <canvas id="Canvas" width="500" height="500" style="border:1px solid #000"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+    var Canvas = document.getElementById("Canvas");
+    var context = Canvas.getContext('2d');
+
+    context.fillText("Hello world!",20,50);
+    context.font = '30px Arial';
+
+    var gradient = context.createLinearGradient(0,0,150,0);
+    gradient.addColorStop(0,'magenta');
+    gradient.addColorStop(0.5,'blue');
+    gradient.addColorStop(1,'red');
+    context.fillStyle = gradient;
+    context.fillText('Big Simle!',20,100)
+
+
+</script>
