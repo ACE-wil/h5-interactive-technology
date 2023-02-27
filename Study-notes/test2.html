@@ -7,18 +7,33 @@
 </body>
 </html>
 <script type="text/javascript">
-    var Canvas = document.getElementById("Canvas");
-    var context = Canvas.getContext('2d');
+    var Canvas = document.getElementById("Canvas");//先把元素抓过来
+    var context = Canvas.getContext('2d');// 再把元素理解成2d形状，变为context变量
 
-    context.fillText("Hello world!",20,50);
-    context.font = '30px Arial';
+    context.fillText("Hello world!",20,50);// 将原来的内容替换成新文本HELLO world
+    context.font = '30px Arial'; // 设置字体
 
-    var gradient = context.createLinearGradient(0,0,150,0);
-    gradient.addColorStop(0,'magenta');
+    var gradient = context.createLinearGradient(0,0,150,0); // 给context变量创建渐变色并赋给新变量gradient 
+/*JavaScript 语法： context.createLinearGradient(x0,y0,x1,y1);
+    参数	描述
+    x0	渐变开始点的 x 坐标
+    y0	渐变开始点的 y 坐标
+    x1	渐变结束点的 x 坐标
+    y1	渐变结束点的 y 坐标  */
+    gradient.addColorStop(0,'magenta'); 
     gradient.addColorStop(0.5,'blue');
     gradient.addColorStop(1,'red');
-    context.fillStyle = gradient;
-    context.fillText('Big Simle!',20,100)
-
+/*
+JavaScript 语法： gradient.addColorStop(stop,color);
+参数	描述
+stop	介于 0.0 与 1.0 之间的值，表示渐变中开始与结束之间的位置。
+color	在 stop 位置显示的 CSS 颜色值。
+*/
+    context.fillStyle = gradient;// 把gradient的内容赋给context变量的填充样式
+    context.fillText('Big Simle!',20,100)  
+    /*
+    JavaScript 语法： context.fillText(text,x,y,maxWidth);
+    */ 
+t
 
 </script>

@@ -13,12 +13,31 @@
     context.fillRect(0,0,500,500);
     // JavaScript 语法： context.fillRect(x,y,width,height);
     context.translate(200,50);
+    /* JavaScript 语法： context.translate(x,y);
+    参数	描述
+x	添加到水平坐标（x）上的值。
+y	添加到垂直坐标（y）上的值。
+    */
     context.fillStyle='rgba(255,0,0,0.25)';
 
     for(var i = 0;i<=50;i++){
         context.translate(25,25);
         context.scale(0.95,0.95);
+    /*
+    JavaScript 语法： context.scale(scalewidth,scaleheight);
+    参数	描述
+scalewidth	缩放当前绘图的宽度（1=100%，0.5=50%，2=200%，依次类推）。
+scaleheight	缩放当前绘图的高度（1=100%，0.5=50%，2=200%，依次类推）。
+    */
         context.rotate(Math.PI/10);
+        /*
+        JavaScript 语法： context.rotate(angle);
+
+        参数	描述
+angle	旋转角度，以弧度计。
+如需将角度转换为弧度，请使用 degrees*Math.PI/180 公式进行计算。
+实例：如需旋转 5 度，可规定下面的公式：5*Math.PI/180。
+        */
         context.fillRect(0,0,100,50)
     }
 </script>
