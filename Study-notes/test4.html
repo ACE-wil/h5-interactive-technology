@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400" style="border:1px solid #000"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+var canvas=document.getElementById("canvas");
+var context=canvas.getContext('2d');
+context.strokeStyle="#ff0000";
+
+context.beginPath();
+context.moveTo(0,0);
+context.lineTo(200,200);
+context.stroke();
+context.closePath();
+
+context.beginPath();
+context.strokeStyle="#0000ff";
+context.lineWidth = "4";
+context.moveTo(0,400);
+context.lineTo(200,200);
+context.stroke();
+context.closePath();
+
+context.beginPath();
+context.strokeStyle="yellow";
+context.lineWidth = "8";
+context.moveTo(400,0);
+context.lineTo(200,200);
+context.stroke();
+context.closePath();
+
+context.beginPath();
+context.strokeStyle="pink";
+context.lineWidth = "12";
+context.lineCap ="round";
+context.moveTo(400,400);
+context.lineTo(200,200);
+context.stroke();
+context.closePath();
+
+</script>
