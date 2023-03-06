@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500" style="border:1px solid #000"></canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.strokeStyle = "rgb(255,0,0)";
+    context.fillStyle = "#00ff00";
+    context.lineWidth = 3;
+    context.rect(20,20,150,100);
+    context.stroke();
+    context.fill();
+
+</script>
+</body>
+</html>

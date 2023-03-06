@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border:1px solid #000"></canvas>
+<script>
+    var c = document.getElementById("canvas");
+    var cxk = canvas.getContext("2d");
+    
+    cxk.beginPath();
+    cxk.arc(200,200,100,0,Math.PI*2)
+    cxk.stroke();
+
+    cxk.beginPath();
+    cxk.strokeStyle = "#ff0000";
+    cxk.arc(200,200,100,0,Math.PI*2/3,false );
+    cxk.stroke();
+
+    cxk.closePath();
+</script>
+
+
+
+</body>
+</html>
