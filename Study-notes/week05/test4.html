@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border: 1px solid #000;"></canvas>    
+</body>
+</html>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    context.fillText("Hello world!",40,40);
+    context.font = "bold italic 30px Times New Roman";
+    context.fillText("Hello world!",40,100);
+    var g = context.createLinearGradient(0,0,200,0);
+    g.addColorStop(0,"red");
+    g.addColorStop(0.5,"blue");
+    g.addColorStop(1,"purple");
+    context.fillStyle = g;
+    context.fillText("Big plan!",40,150);
+    
+
+    context.strokeStyle=g;
+    context.strokeText("big smile!",40,200)
+
+
+</script>

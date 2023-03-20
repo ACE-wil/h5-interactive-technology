@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <canvas id="canvas" style="height: 500;width: 500;border: 1px solid #000;"></canvas>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        context.shadowBlur = 10;
+        context.shadowOffsetX = 20;
+        context.shadowOffsetY = 20;
+        context.shadowColor = 'black'; 
+        context.fillStyle = 'red';
+        context.fillRect(30,30,200,100);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border: 1px solid #000;"></canvas>    
+</body>
+</html>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var image = new Image();
+    image.src = 'creater.png';
+    image.onload=function(){
+        context.drawImage(image,10,10,150,150);
+        context.drawImage(image,30,30,130,130,210,210,200,200)
+    }
+
+
+</script>

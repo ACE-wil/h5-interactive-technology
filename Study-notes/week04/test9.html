@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>牛客教程(nowcoder.com)</title>
+</head>
+<body>
+
+	<canvas id="canvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+	</canvas>
+	<script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        context.fillStyle = 'red';
+        context.fillRect(50,50,200,100);
+        context.beginPath();
+        context.fillStyle='green';
+        context.translate(100,100);
+        context.fillRect(50,50,200,100);
+	</script>
+
+</body>
+</html>
