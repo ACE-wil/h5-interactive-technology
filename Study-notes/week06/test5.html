@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="lib/preloadjs-0.4.1.min.js"></script>
+    <script src="lib/easeljs-0.7.1.min.js"></script>
+    <script src="lib/soundjs-0.5.2.min.js"></script>
+    <script src="lib/tweenjs-0.5.1.min.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600" style="border: 1px solid #71bdff;"></canvas>
+    
+</body>
+</html>
+
+
+<script>
+    var stage = new createjs.Stage('canvas');
+    stage.x=100;
+    stage.y=100;
+    var text = new createjs.Text('Hello world!','50px New Times Roman','#ff0000');
+    stage.addChild(text);
+    createjs.Ticker.addEventListener('tick',function(){
+        stage.update()
+    })
+    createjs.Ticker.setFPS(60)
+
+
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/preloadjs-0.4.1.min.js"></script>
+<script src="lib/easeljs-0.7.1.min.js"></script>
+<script src="lib/soundjs-0.5.2.min.js"></script>
+<script src="lib/tweenjs-0.5.1.min.js"></script>
+
+
+</head>
+<body onload="init()">
+    <canvas id="myCanvas" width="600" height="600" style="border: 1px solid #0008ff;"></canvas>
+</body>
+</html>
+
+<script>
+    var stage;
+    function init(){
+        stage = new createjs.Stage(document.getElementById('myCanvas'));
+        createjs.Ticker.addEventListener('tick',function(e){
+            stage.update();
+        })
+        createjs.Ticker.setFPS(60);
+        drawButterflies()
+    }
+
+    function drawButterflies(){
+        var imagpath = 'images/butterfly.png';
+        butterfly1 = new createjs.Bitmap(imagpath);
+        butterfly2 = new createjs.Bitmap(imagpath);
+        butterfly3 = new createjs.Bitmap(imagpath);
+        butterfly2.x = 200;
+        butterfly3.x = 400;
+        stage.addChild(butterfly1,butterfly2,butterfly3);
+        stage.update();
+        setTimeout(moveButterflies,1000)
+    }
+
+    function moveButterflies(){
+        butterfly2.y+=400;
+    }
+</script>

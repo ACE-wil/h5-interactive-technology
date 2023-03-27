@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600" style="border: 1px solid #71bdff;"></canvas>
+</body>
+</html>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var butter = new Image();
+    butter.src="images/butterfly.png";
+    butter.onload=drawButter;
+    function drawButter(){
+        context.drawImage(butter,0,0,200,138,0,0,200,138);
+        context.drawImage(butter,0,0,200,138,200,0,200,138);
+        context.drawImage(butter,0,0,200,138,400,0,200,138);
+        setTimeout(function(){
+        context.clearRect(0,0,600,600);
+        context.drawImage(butter,0,0,200,138,0,0,200,138);
+        context.drawImage(butter,0,0,200,138,200,200,200,138);
+        context.drawImage(butter,0,0,200,138,400,0,200,138);
+        },1000)
+    }
+
+
+
+</script>
