@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="lib/easeljs-0.7.1.min.js"></script>
+    <script src="lib/preloadjs-0.4.1.min.js"></script>
+    <script src="lib/soundjs-0.5.2.min.js"></script>
+    <script src="lib/tweenjs-0.5.1.min.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600" style="border: 1px solid
+     #ccc;"></canvas>
+     
+</body>
+</html>
+
+<script>
+    var stage = new createjs.Stage("canvas");
+    stage.alpha = 0.5;
+    stage.x = 100;
+    stage.y = 100;
+    stage.scaleX = 2;
+    stage.scaleY = 0.5;
+    var re = new createjs.Shape();
+    re.graphics.beginFill('#fff0000').drawRect(0,0,100,100);
+    stage.addChild(re);
+        stage.update();
+</script>

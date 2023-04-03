@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="lib/easeljs-0.7.1.min.js"></script>
+    <script src="lib/preloadjs-0.4.1.min.js"></script>
+    <script src="lib/soundjs-0.5.2.min.js"></script>
+    <script src="lib/tweenjs-0.5.1.min.js"></script>
+</head>
+<body onload="init()">
+    <canvas id="canvas" width="600" height="600" style="border: 1px solid
+     #ccc;"></canvas>
+     
+</body>
+</html>
+
+<script>
+    var stage;
+    var tween;
+    function init(){
+    stage = new createjs.Stage("canvas");
+    createjs.Ticker.setFPS(60);
+    createjs.Ticker.addEventListener('tick',function(){
+        stage.update();
+    })
+    sample();
+    }
+
+    function sample(){
+        var co = new createjs.Container();
+        var pepper = new createjs.Bitmap("images/pepper.png");
+        var title = new createjs.Text("Green pepper","30px New Times Roman","red");
+        var bg = new createjs.Shape();
+        bg.graphics.beginStroke("#ccc").drawRect(0,0,250,250);
+        title.x = title.y = 10;
+        pepper.x = pepper.y = 80;
+        co.regX = co.regY = 125;
+        co.x = 200;
+        co.y = 300;
+        co.addChild(bg,title,pepper);
+        stage.addChild(co);
+        createjs.Tween.get(co).to({rotation:360},4000)
+
+        tween = createjs.Tween.get(co, {loop:true}) .to({rotation:360}, 4000);
+
+    }
+</script>
